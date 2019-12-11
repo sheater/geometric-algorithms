@@ -2,6 +2,15 @@
 
 This project was created for study purposes for subject PA093 Computational Geometry Project on Masaryk University, Faculty of informatics.
 
+## Features
+Following algorithms are presented:
+- Convex hull: Gift wrapping
+- Convex hull: Graham scan
+- Triangulation: Sweep line
+- k-D Tree
+- Triangulation: Delaunay
+- Voronoi diagrams
+
 ## Requirements
 - Node (version >=10)
 
