@@ -1,4 +1,4 @@
-import Vector from "./Vector"
+import Vector from "./Vector";
 
 export function crossProduct(a: Vector, b: Vector, c: Vector) {
   return (b.x - a.x) * (c.y - a.y) - (b.y - a.y) * (c.x - a.x);
@@ -32,4 +32,23 @@ export function getCircumcircleTriangleCenter(
   const y = -(A2 * (b.x - c.x) + B2 * (c.x - a.x) + C2 * (a.x - b.x)) / d;
 
   return new Vector(x, y);
+}
+
+export function isInTriangle(p: Vector, a: Vector, b: Vector, c: Vector) {
+  var v0 = [c.x - a.x, c.y - a.y];
+  var v1 = [b.x - a.x, b.y - a.y];
+  var v2 = [p.x - a.x, p.y - a.y];
+
+  var dot00 = v0[0] * v0[0] + v0[1] * v0[1];
+  var dot01 = v0[0] * v1[0] + v0[1] * v1[1];
+  var dot02 = v0[0] * v2[0] + v0[1] * v2[1];
+  var dot11 = v1[0] * v1[0] + v1[1] * v1[1];
+  var dot12 = v1[0] * v2[0] + v1[1] * v2[1];
+
+  var invDenom = 1 / (dot00 * dot11 - dot01 * dot01);
+
+  var u = (dot11 * dot02 - dot01 * dot12) * invDenom;
+  var v = (dot00 * dot12 - dot01 * dot02) * invDenom;
+
+  return u >= 0 && v >= 0 && u + v < 1;
 }
