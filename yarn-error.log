@@ -1,0 +1,34 @@
+Arguments: 
+  /Users/stepanskovajsa/dev/emsdk/node/8.9.1_64bit/bin/node /usr/local/Cellar/yarn/1.10.1/libexec/bin/yarn.js add --dev webpack
+
+PATH: 
+  /Users/stepanskovajsa/.local/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/3.7/bin:/Users/stepanskovajsa/dev/emsdk:/Users/stepanskovajsa/dev/emsdk/clang/e1.38.28_64bit:/Users/stepanskovajsa/dev/emsdk/node/8.9.1_64bit/bin:/Users/stepanskovajsa/dev/emsdk/emscripten/1.38.28:/Users/stepanskovajsa/.nvm/versions/node/v8.9.4/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin
+
+Yarn version: 
+  1.10.1
+
+Node version: 
+  8.9.1
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: connect ECONNREFUSED 104.16.17.35:443
+      at Object._errnoException (util.js:1024:11)
+      at _exceptionWithHostPort (util.js:1046:20)
+      at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1182:14)
+
+npm manifest: 
+  {
+    "name": "geometricke_algoritmy",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
